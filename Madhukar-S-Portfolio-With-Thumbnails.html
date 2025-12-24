@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhukar S - Creative Director Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #208090 0%, #1a6472 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .header-links a:hover {
+            background: white;
+            color: #208090;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            background: white;
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            color: #208090;
+            font-size: 2em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #208090;
+            padding-bottom: 15px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .portfolio-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(32, 128, 144, 0.2);
+        }
+        
+        .thumbnail {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #208090 0%, #1a6472 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+            font-weight: bold;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .thumbnail-fallback {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            background: linear-gradient(135deg, #208090 0%, #1a6472 100%);
+        }
+        
+        .portfolio-content {
+            padding: 20px;
+        }
+        
+        .portfolio-content h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .portfolio-content p {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .watch-btn {
+            display: inline-block;
+            background: #208090;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .watch-btn:hover {
+            background: #1a6472;
+        }
+        
+        .role-badge {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #208090;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        footer a {
+            color: #208090;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MADHUKAR S</h1>
+        <p>Creative Director | Video & Visual Lead | Storyteller</p>
+        <div class="header-links">
+            <a href="https://www.imdb.com/name/nm8857454/" target="_blank">IMDb Profile</a>
+            <a href="https://in.linkedin.com/in/madhukar-niyogi" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- VIDEO DIRECTION & FILM PRODUCTION -->
+        <section>
+            <h2>🎬 Video Direction & Film Production</h2>
+            <div class="portfolio-grid">
+                <!-- Kiccha Sudeep Ad -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image6.png" alt="Kiccha Sudeep Ad Campaign" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎥</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Writer & Co-Director</span>
+                        <h3>Kiccha Sudeep Ad Campaign</h3>
+                        <p>Conceptualized and directed visual ad campaign featuring superstar Kiccha Sudeep.</p>
+                        <a href="https://vimeo.com/473468920" target="_blank" class="watch-btn">Watch on Vimeo</a>
+                    </div>
+                </div>
+                
+                <!-- Mr & Mrs Ramachari -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image11.png" alt="Mr & Mrs Ramachari" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎬</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Assistant Director</span>
+                        <h3>Mr & Mrs Ramachari</h3>
+                        <p>AD on blockbuster film starring Yash. Managed on-set production coordination.</p>
+                        <a href="https://www.youtube.com/watch?v=gvIN8dznwm4" target="_blank" class="watch-btn">Watch Trailer</a>
+                    </div>
+                </div>
+                
+                <!-- Urvi -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image3.png" alt="Urvi" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎭</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Associate Director & Lead Actor</span>
+                        <h3>Urvi (2017)</h3>
+                        <p>End-to-end production from inception to release while performing as lead.</p>
+                        <a href="https://www.primevideo.com/detail/0H3RVKDNYH88Q3G9RTZKV737JQ/ref=atv_br_def_r_br_c_unkc_1_153" target="_blank" class="watch-btn">Watch on Prime</a>
+                    </div>
+                </div>
+                
+                <!-- KA -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image7.png" alt="KA" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎞️</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Lead Actor</span>
+                        <h3>KA (2014)</h3>
+                        <p>Lead role in feature film released in 2014.</p>
+                        <a href="https://www.voot.com/movies/ka/564420" target="_blank" class="watch-btn">Watch on Voot</a>
+                    </div>
+                </div>
+                
+                <!-- Stuck in Limbo -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image2.png" alt="Stuck in Limbo" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎪</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Lead Actor</span>
+                        <h3>Stuck in Limbo (Short Film)</h3>
+                        <p>Lead role in compelling short film.</p>
+                        <a href="https://www.youtube.com/watch?v=ElSNR0iJbf0" target="_blank" class="watch-btn">Watch on YouTube</a>
+                    </div>
+                </div>
+                
+                <!-- Bangalore Pearls -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image12.png" alt="Bangalore Pearls" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">💎</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Lead Actor</span>
+                        <h3>Bangalore Pearls (IFP 2022)</h3>
+                        <p>Lead actor in festival short film.</p>
+                        <a href="https://www.youtube.com/watch?v=uXecuQ246mQ" target="_blank" class="watch-btn">Watch on YouTube</a>
+                    </div>
+                </div>
+                
+                <!-- Muddu Muddagi -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image10.png" alt="Muddu Muddagi" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎨</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Lead Actor</span>
+                        <h3>Muddu Muddagi (Short Film)</h3>
+                        <p>Lead performance in short film.</p>
+                        <a href="https://www.youtube.com/watch?v=jQ6ceG8qNhw" target="_blank" class="watch-btn">Watch on YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUAL CONTENT & BRAND LEADERSHIP -->
+        <section>
+            <h2>📱 Visual Content & Brand Leadership</h2>
+            <div class="portfolio-grid">
+                <!-- UBlood -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image1.png" alt="UBlood" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎞️</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Video Editing & Post-Production</span>
+                        <h3>UBlood (Sonu Sood)</h3>
+                        <p>Complete post-production and editing for brand videos.</p>
+                        <a href="https://www.youtube.com/@ublood5106" target="_blank" class="watch-btn">Watch Channel</a>
+                    </div>
+                </div>
+                
+                <!-- Superr Pets Website -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image14.png" alt="Superr Pets Website" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🐾</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Website Design & Branding</span>
+                        <h3>Superr Pets - Website</h3>
+                        <p>Website banners, UX design, and visual identity.</p>
+                        <a href="https://www.superrpets.com/" target="_blank" class="watch-btn">Visit Website</a>
+                    </div>
+                </div>
+                
+                <!-- Superr Pets Instagram -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image4.png" alt="Superr Pets Instagram" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">📸</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Social Media Marketing</span>
+                        <h3>Superr Pets - Instagram</h3>
+                        <p>Complete social media marketing and visual content strategy.</p>
+                        <a href="https://www.instagram.com/pets.superr/" target="_blank" class="watch-btn">Visit Instagram</a>
+                    </div>
+                </div>
+                
+                <!-- Superr Pets Blog -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image5.png" alt="Superr Pets Blog" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">✍️</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Content Strategy</span>
+                        <h3>Superr Pets - Blog Content</h3>
+                        <p>SEO-optimized blog articles and content strategy.</p>
+                        <a href="https://www.superrpets.com/news-and-articles" target="_blank" class="watch-btn">Read Articles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUDIO STORYTELLING & AI INNOVATION -->
+        <section>
+            <h2>🎙️ Audio Storytelling & AI Innovation</h2>
+            <div class="portfolio-grid">
+                <!-- Military Action Series -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image9.png" alt="Military Action Series" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎧</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Show Creator</span>
+                        <h3>Military Action Series (Relaunch)</h3>
+                        <p>Relaunched popular military action audio series on Pocket FM.</p>
+                        <a href="https://pocketfm.com/show/4d73e6439bd953559c36027992e11547f43e166a" target="_blank" class="watch-btn">Listen on Pocket FM</a>
+                    </div>
+                </div>
+                
+                <!-- Crime Thriller Series -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image13.png" alt="Crime Thriller Series" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🎯</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Show Creator</span>
+                        <h3>Crime Thriller Series (Season 1)</h3>
+                        <p>Launched first season of crime thriller audio series.</p>
+                        <a href="https://pocketfm.com/show/bf581833fd3dd1a35c4b77707b3989b643fd9a8c" target="_blank" class="watch-btn">Listen on Pocket FM</a>
+                    </div>
+                </div>
+                
+                <!-- Agatha Christie Adaptation -->
+                <div class="portfolio-item">
+                    <div class="thumbnail">
+                        <img src="thumbnails/image8.png" alt="Agatha Christie Adaptation" onerror="this.style.display='none'">
+                        <div class="thumbnail-fallback">🔍</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="role-badge">Writer & Adapter</span>
+                        <h3>Agatha Christie Adaptation</h3>
+                        <p>Adapted classic short story for audio format on Headfone.com.</p>
+                        <a href="https://www.headfone.co.in/channel/lookalike/" target="_blank" class="watch-btn">Listen on Headfone</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SUMMARY -->
+        <section>
+            <h2>🛠️ Skills & Competencies</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div>
+                    <h3 style="color: #208090; margin-bottom: 10px;">Visual Leadership</h3>
+                    <p>Video Direction • Ad Filmmaking • Post-Production Supervision • Team Management (Designers/Editors) • Visual Storytelling</p>
+                </div>
+                <div>
+                    <h3 style="color: #208090; margin-bottom: 10px;">Creative Direction</h3>
+                    <p>Brand Strategy • Visual Storytelling • AI Prompt Engineering • Scriptwriting • Content Strategy</p>
+                </div>
+                <div>
+                    <h3 style="color: #208090; margin-bottom: 10px;">Production Tools</h3>
+                    <p>Video Editing Software • AI Content Tools • Design Basics • Social Media Strategy • Audio Production</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>MADHUKAR S</strong> | Creative Director & Visual Storyteller</p>
+        <p>Email: [Your Email] | Phone: [Your Phone]</p>
+        <p>🔗 <a href="https://www.imdb.com/name/nm8857454/" target="_blank">IMDb</a> | <a href="https://in.linkedin.com/in/madhukar-niyogi" target="_blank">LinkedIn</a></p>
+    </footer>
+</body>
+</html>
