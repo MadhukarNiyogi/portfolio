@@ -3,234 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madhukar S - Creative Director</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Madhukar S - Portfolio</title>
     <style>
-        :root {
-            --bg-color: #faf9f6; /* Alabaster White */
-            --text-main: #1a1a1a;
-            --text-muted: #666666;
-            --accent: #2c2c2c;
-            --card-bg: #ffffff;
-            --border: #e5e5e5;
-        }
-
+        /* RESET & BASICS */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7; /* Light grey apple-style background */
+            color: #1d1d1f; /* Dark grey text */
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
-        
+
+        /* CONTAINER */
         .container {
-            max-width: 1000px;
+            max-width: 980px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 40px 20px;
+            background-color: #f5f5f7;
         }
-        
-        /* HEADER - Minimalist & Clean */
+
+        /* HEADER */
         header {
             text-align: center;
-            padding: 60px 0 80px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 60px;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #d2d2d7;
         }
-        
+
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            color: var(--text-main);
-            margin-bottom: 15px;
+            font-size: 48px;
+            font-weight: 700;
             letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            color: #000000;
         }
-        
+
         header p {
-            font-size: 1.2em;
-            color: var(--text-muted);
+            font-size: 21px;
+            color: #86868b;
             margin-bottom: 30px;
-            font-weight: 300;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 400;
         }
-        
-        .header-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
+
         .header-links a {
+            display: inline-block;
+            margin: 0 10px;
             text-decoration: none;
-            color: var(--text-main);
-            padding: 10px 24px;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            font-weight: 500;
+            color: #0066cc;
+            font-size: 17px;
+            font-weight: 400;
         }
         
         .header-links a:hover {
-            background: var(--text-main);
-            color: white;
-            border-color: var(--text-main);
+            text-decoration: underline;
         }
 
         /* SECTIONS */
         section {
             margin-bottom: 80px;
         }
-        
+
         section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
+            font-size: 32px;
+            font-weight: 600;
             margin-bottom: 40px;
-            color: var(--text-main);
-            border-left: 4px solid var(--text-main);
-            padding-left: 20px;
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        /* CARDS */
-        .portfolio-item {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-        
-        /* THUMBNAIL SYSTEM */
-        .thumbnail {
-            width: 100%;
-            height: 200px; /* Fixed height is crucial */
-            position: relative;
-            background-color: #f0f0f0;
-            overflow: hidden;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        /* The Fallback Layer (Always there, sits at bottom) */
-        .thumbnail-fallback {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3em;
-            color: #d1d1d1;
-            z-index: 1;
-        }
-        
-        /* The Image Layer (Sits on top) */
-        .thumbnail img {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 2; /* Ensures image covers the fallback */
-            transition: transform 0.5s ease;
-        }
-        
-        .portfolio-item:hover .thumbnail img {
-            transform: scale(1.03);
-        }
-        
-        .portfolio-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        
-        .role-badge {
-            font-size: 0.75em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .portfolio-content h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .portfolio-content p {
-            font-size: 0.95em;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-            flex-grow: 1;
-        }
-        
-        /* BUTTONS */
-        .watch-btn {
-            display: inline-block;
-            text-decoration: none;
-            color: white;
-            background-color: var(--accent);
-            padding: 12px 20px;
-            border-radius: 2px;
-            font-size: 0.85em;
-            font-weight: 500;
-            text-align: center;
-            transition: background 0.3s ease;
-        }
-        
-        .watch-btn:hover {
-            background-color: black;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e5e5;
+            color: #1d1d1f;
         }
 
-        /* SKILLS SECTION */
-        .skills-grid {
+        /* GRID LAYOUT */
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
 
+        /* CARDS */
+        .portfolio-item {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        /* THUMBNAILS - THE FIX */
+        .thumbnail-container {
+            width: 100%;
+            height: 200px; /* Forces height even if empty */
+            background-color: #e0e0e0; /* Grey background if image fails */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Fallback text that sits behind the image */
+        .thumbnail-fallback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #888;
+            font-size: 14px;
+            z-index: 0;
+            text-align: center;
+        }
+        
+        /* Image sits on top of fallback */
+        .portfolio-img {
+            position: relative;
+            z-index: 1; 
+        }
+
+        /* CONTENT */
+        .portfolio-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .role-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #86868b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .portfolio-content h3 {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .portfolio-content p {
+            font-size: 15px;
+            color: #515154;
+            margin-bottom: 24px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* BLACK BUTTONS */
+        .watch-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            background-color: #1d1d1f;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: auto;
+        }
+
+        .watch-btn:hover {
+            background-color: #000000;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
         .skill-card {
-            padding: 30px;
             background: white;
-            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .skill-card h3 {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1d1d1f;
         }
-        
+
         .skill-card p {
-            font-size: 0.9em;
-            color: var(--text-muted);
-            line-height: 1.8;
+            font-size: 14px;
+            color: #515154;
         }
 
         footer {
+            text-align: center;
+            padding: 60px 0;
+            color: #86868b;
+            font-size: 12px;
+            border-top: 1px solid #d2d2d7;
             margin-top: 60px;
-            padding: 40px 0;
-            border-top: 1px solid var(--border);
-            text-
+        }
+        
+        footer a {
+            color: #1d1d1f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>MADHUKAR S</h1>
+        <p>Creative Director | Video & Visual Lead</p>
+        <div class="header-links">
+            <a href="https://www.imdb.com/name/nm8857454/" target="_blank">IMDb Profile</a>
+            <a href="https://in.linkedin.com/in/madhukar-niyogi" target="_blank">LinkedIn</a>
+            <a href="mailto:madhukarniyogi@gmail.com">Contact</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Advertising & Films</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="thumbnail-container">
+                    <span class="thumbnail-fallback">Image not found<br>check thumbnails/image6.png</span>
+                    <img src="thumbnails/image6.png" class="portfolio-img" alt="Kiccha Sudeep" onerror="this.style.display='none'">
+                </div>
+                <div class="portfolio-content">
+                    <span class="role-badge">Writer & Co-Director</span>
+                    <h3>Kiccha Sudeep Ad Campaign</h3>
+                    <p>Conceptualized and directed visual ad campaign featuring superstar Kiccha Sudeep.</p>
